@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1> A Simple Form</h1>
+
+        <form id="bookform" method="post" novalidate>
+            <fieldset>
+                <legend>Customer Info</legend>
+
+                <div class="Form-group">
+                    <label for="cusname">Name</label>
+                    <input type="text" id="cusname" name="cusname" palceholder="Enter your name" autofocus required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Telephone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Enter telephone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="mail" name="mail" palceholder="Enter your email address" reqiured>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Books</legend>
+
+                <div class="form-group">
+                    <label for="book">Books</label>
+                    <input list="books" id="book" name="book" required>
+                    <datalist id="books">
+                        <option value="HTML5-Bruce Lawson and Remy Sharp"> </option>
+                        <option value="HTML5-Up and Running - Mark Pilgrim"> </option>
+                        <option value="Head First HTML5 Programming -Eric Freeman"></option>
+                        <option value="Mastering HTML,CSS and JavaScript - Laura Lemay"></option>
+                    </datalist>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity (Maximum 5)</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" reqiured>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+
+        <div id="confirmation-message">
+            <p>You have successfully submit the book form.</p>
+        </div>
+    </div>
+    
+    <style>
+        #confirmation-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        form:valid + #confirmation-message {
+            display:block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width:150px;
+            font-weight:bold;
+            text-align: left;
+        }
+
+        inpu[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</body>
+</html>

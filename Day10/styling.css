@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.headerimg {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button-container {
+    display:flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    justify-content: pointer;
+}
+
+.button-img {
+    width: 100px;
+    height: 100px;
+}
+
+.sumit-btn img:hover {
+    background-color: #218838;
+
+}
+
+.reset-btn img:hover {
+    background-color: #c82333;
+}
